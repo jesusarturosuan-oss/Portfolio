@@ -1,1 +1,1549 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jesus Arturo Suan - Virtual Assistant, Customer Support and Technical Support Professional">
+  <meta name="theme-color" content="#0b1120">
+  <title>Jesus Arturo Suan | Professional Portfolio</title>
+
+  <style>
+    /* =========================================================
+       JESUS ARTURO SUAN - PERSONAL PORTFOLIO
+       Everything is contained in this single HTML file.
+       You can edit the information marked with "EDIT HERE".
+       ========================================================= */
+
+    :root {
+      --bg: #070b14;
+      --bg-secondary: #0b1120;
+      --card: rgba(17, 25, 43, 0.72);
+      --card-solid: #11192b;
+      --text: #f4f7fb;
+      --muted: #9aa8bd;
+      --blue: #4f8cff;
+      --blue-light: #6ea1ff;
+      --indigo: #7667ff;
+      --border: rgba(255, 255, 255, 0.09);
+      --success: #54d69a;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 18px;
+      --max-width: 1150px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(79, 140, 255, 0.12), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(118, 103, 255, 0.10), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 11, 20, 0.78);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid transparent;
+      transition: 0.3s ease;
+    }
+
+    header.scrolled {
+      border-bottom-color: var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: white;
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* =========================
+       GENERAL
+       ========================= */
+
+    section {
+      padding: 100px 0;
+      scroll-margin-top: 70px;
+    }
+
+    .section-heading {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--blue-light);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff, var(--blue-light), #9388ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(15px);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 21px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--indigo));
+      border: none;
+      box-shadow: 0 10px 30px rgba(79, 140, 255, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(79, 140, 255, 0.3);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       HOME
+       ========================= */
+
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 130px;
+      position: relative;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid rgba(84,214,154,0.2);
+      background: rgba(84,214,154,0.07);
+      color: #8be9ba;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .availability-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--success);
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      color: var(--blue-light);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card {
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: var(--blue);
+      filter: blur(90px);
+      opacity: 0.2;
+      top: -70px;
+      right: -60px;
+    }
+
+    .profile-placeholder {
+      width: 145px;
+      height: 145px;
+      margin: 0 auto 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #172746, #11172c);
+      border: 1px solid rgba(110,161,255,0.35);
+      color: var(--blue-light);
+      font-size: 3rem;
+      font-weight: 800;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card h3 {
+      text-align: center;
+      font-size: 1.35rem;
+      margin-bottom: 5px;
+    }
+
+    .hero-card > p {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .quick-info {
+      margin-top: 25px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .quick-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+
+    .quick-item span:first-child {
+      color: var(--muted);
+    }
+
+    .quick-item span:last-child {
+      text-align: right;
+      font-weight: 700;
+    }
+
+    /* =========================
+       ABOUT
+       ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 35px;
+    }
+
+    .about-card {
+      padding: 35px;
+    }
+
+    .about-card h3 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .stat {
+      padding: 20px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.6rem;
+      color: white;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    /* =========================
+       SKILLS
+       ========================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      padding: 28px;
+      transition: 0.3s ease;
+    }
+
+    .skill-card:hover,
+    .service-card:hover,
+    .project-card:hover,
+    .experience-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(110,161,255,0.3);
+    }
+
+    .skill-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(79,140,255,0.12);
+      color: var(--blue-light);
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin-bottom: 18px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 7px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* =========================
+       EXPERIENCE
+       ========================= */
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--blue), transparent);
+    }
+
+    .experience-card {
+      position: relative;
+      margin-left: 55px;
+      margin-bottom: 25px;
+      padding: 28px;
+      transition: 0.3s ease;
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      left: -43px;
+      top: 32px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 18px rgba(79,140,255,0.6);
+    }
+
+    .experience-date {
+      color: var(--blue-light);
+      font-size: 0.78rem;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .experience-card h3 {
+      margin-bottom: 2px;
+    }
+
+    .company {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .experience-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       PROJECTS
+       ========================= */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+
+    .project-top {
+      height: 150px;
+      background:
+        linear-gradient(135deg, rgba(79,140,255,0.25), rgba(118,103,255,0.15)),
+        #10192b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content h3 {
+      margin-bottom: 8px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(79,140,255,0.1);
+      color: var(--blue-light);
+      border: 1px solid rgba(79,140,255,0.15);
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    /* =========================
+       EDUCATION + CERTIFICATIONS
+       ========================= */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .info-card {
+      padding: 32px;
+    }
+
+    .info-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .certificate {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .certificate-icon {
+      min-width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(118,103,255,0.12);
+      color: #a29aff;
+      font-weight: 900;
+    }
+
+    /* =========================
+       SERVICES
+       ========================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 30px;
+      transition: 0.3s ease;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* =========================
+       CONTACT
+       ========================= */
+
+    .contact-box {
+      padding: 45px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-box::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: var(--blue);
+      filter: blur(120px);
+      opacity: 0.12;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .contact-box > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-box h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .contact-link {
+      padding: 11px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      transition: 0.25s ease;
+    }
+
+    .contact-link:hover {
+      color: white;
+      border-color: rgba(110,161,255,0.35);
+      background: rgba(79,140,255,0.08);
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* =========================
+       REVEAL ANIMATION
+       ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 500px;
+        margin: auto;
+      }
+
+      .about-grid,
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      section {
+        padding: 75px 0;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: rgba(7,11,20,0.98);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        margin-left: 40px;
+      }
+
+      .timeline::before {
+        left: 11px;
+      }
+
+      .experience-card::before {
+        left: -36px;
+      }
+
+      .contact-box {
+        padding: 30px 20px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       NAVIGATION
+       EDIT HERE: Change navigation labels or your name/logo.
+       ========================================================= -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">Jesus<span>.</span></a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- =========================================================
+       HOME
+       EDIT HERE: Change your name, title and introduction.
+       ========================================================= -->
+  <main>
+
+    <section id="home">
+      <div class="container">
+        <div class="hero">
+
+          <div class="hero-content reveal">
+            <div class="availability">
+              <span class="availability-dot"></span>
+              Available for opportunities
+            </div>
+
+            <h1>
+              Jesus Arturo<br>
+              <span class="gradient-text">Suan</span>
+            </h1>
+
+            <!-- EDIT HERE: Your professional title -->
+            <div class="hero-title">
+              Virtual Assistant • Customer Support • Technical Support
+            </div>
+
+            <p class="hero-description">
+              Detail-oriented professional with 6+ years of experience
+              across IT, healthcare, billing, customer support, and virtual
+              assistance. I focus on solving problems, supporting customers,
+              and delivering accurate results in fast-paced environments.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">
+                Let's Work Together →
+              </a>
+
+              <a href="#experience" class="btn btn-secondary">
+                View Experience
+              </a>
+            </div>
+          </div>
+
+
+          <div class="hero-card card reveal">
+            <div class="profile-placeholder">
+              JS
+            </div>
+
+            <h3>Jesus Arturo Suan</h3>
+
+            <p>Virtual Assistant & Support Professional</p>
+
+            <div class="quick-info">
+              <div class="quick-item">
+                <span>Experience</span>
+                <span>7+ Years BPO & VA</span>
+              </div>
+
+              <div class="quick-item">
+                <span>Location</span>
+                <span>Barotac Nuevo, Iloilo</span>
+              </div>
+
+              <div class="quick-item">
+                <span>Focus</span>
+                <span>Remote Support</span>
+              </div>
+
+              <div class="quick-item">
+                <span>Availability</span>
+                <span>Open to Work</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT
+         EDIT HERE: Update your personal description.
+         ========================================================= -->
+    <section id="about">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="eyebrow">About Me</div>
+          <h2>Reliable, adaptable, and <span class="gradient-text">solution-focused.</span></h2>
+          <p>
+            A professional background combining technical support,
+            healthcare, billing, and customer service.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-card card reveal">
+            <h3>Who I Am</h3>
+
+            <p>
+              I’m a detail-oriented professional with over 6 years of
+              experience in IT, healthcare, billing, and customer support.
+            </p>
+
+            <p>
+              I have experience handling technical issues such as VPN,
+              connectivity, phone, and software concerns, as well as
+              healthcare and medical billing tasks including denied claims,
+              appeals, prior authorizations, and insurance verification.
+            </p>
+
+            <p>
+              I’m comfortable working in fast-paced environments, managing
+              multiple tasks, and communicating with customers, providers,
+              and insurance representatives.
+            </p>
+
+            <p>
+              I’m adaptable to different schedules and focused on providing
+              accurate solutions while maintaining good customer service
+              and meeting performance goals.
+            </p>
+          </div>
+
+          <div class="about-card card reveal">
+            <h3>What I Bring</h3>
+
+            <p>
+              My experience has allowed me to work across different types of
+              support environments. I understand the importance of clear
+              communication, attention to detail, troubleshooting, and
+              following processes correctly.
+            </p>
+
+            <div class="stats">
+              <div class="stat">
+                <strong>7+</strong>
+                <span>Years BPO & VA Experience</span>
+              </div>
+
+              <div class="stat">
+                <strong>3+</strong>
+                <span>Core Support Areas</span>
+              </div>
+
+              <div class="stat">
+                <strong>IT</strong>
+                <span>Technical Support Background</span>
+              </div>
+
+              <div class="stat">
+                <strong>VA</strong>
+                <span>Remote Work Experience</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SKILLS
+         EDIT HERE: Add/remove skills.
+         ========================================================= -->
+    <section id="skills">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="eyebrow">Skills</div>
+          <h2>What I <span class="gradient-text">do best.</span></h2>
+          <p>
+            Practical skills developed through BPO, healthcare,
+            technical support, and virtual assistant roles.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card card reveal">
+            <div class="skill-icon">VA</div>
+            <h3>Virtual Assistance</h3>
+            <p>
+              Remote administrative and support work, task management,
+              research, communication, and workflow support.
+            </p>
+          </div>
+
+          <div class="skill-card card reveal">
+            <div class="skill-icon">CS</div>
+            <h3>Customer Support</h3>
+            <p>
+              Professional customer communication, issue resolution,
+              account assistance, and customer-focused problem solving.
+            </p>
+          </div>
+
+          <div class="skill-card card reveal">
+            <div class="skill-icon">IT</div>
+            <h3>Technical Support</h3>
+            <p>
+              Troubleshooting connectivity, VPN, phones, computers,
+              software, Wi-Fi, and related technical concerns.
+            </p>
+          </div>
+
+          <div class="skill-card card reveal">
+            <div class="skill-icon">RCM</div>
+            <h3>Medical Billing</h3>
+            <p>
+              Experience with denied claims, appeals, prior authorizations,
+              insurance requirements, and claim review.
+            </p>
+          </div>
+
+          <div class="skill-card card reveal">
+            <div class="skill-icon">QA</div>
+            <h3>Attention to Detail</h3>
+            <p>
+              Focused on accurate documentation, proper information,
+              quality work, and following established processes.
+            </p>
+          </div>
+
+          <div class="skill-card card reveal">
+            <div class="skill-icon">TM</div>
+            <h3>Time Management</h3>
+            <p>
+              Comfortable handling multiple tasks and prioritizing work
+              in high-volume and fast-paced environments.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         EXPERIENCE
+         EDIT HERE: Update experience information as needed.
+         ========================================================= -->
+    <section id="experience">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="eyebrow">Experience</div>
+          <h2>My professional <span class="gradient-text">journey.</span></h2>
+          <p>
+            Experience across technical support, healthcare, billing,
+            and remote medical virtual assistance.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <div class="experience-card card reveal">
+            <div class="experience-date">10/2024 — 05/2026</div>
+            <h3>Medical Virtual Assistant / Medical Biller</h3>
+            <div class="company">Global Medical Virtual Assistant • Remote</div>
+            <p>
+              Worked with a U.S. fertility clinic, specializing in denied
+              claims management, appeals, prior authorizations, and claim
+              review. Used payer portals to investigate denials, verify
+              insurance requirements, ensure accurate ICD coding, and
+              coordinate with insurance representatives.
+            </p>
+          </div>
+
+          <div class="experience-card card reveal">
+            <div class="experience-date">11/2023 — 10/2024</div>
+            <h3>Technical Support</h3>
+            <div class="company">Telus International • Iloilo City</div>
+            <p>
+              Troubleshot technical concerns involving phones, email,
+              Wi-Fi connectivity, computers, hardware, and software while
+              providing customer-focused support.
+            </p>
+          </div>
+
+          <div class="experience-card card reveal">
+            <div class="experience-date">12/2020 — 11/2023</div>
+            <h3>Healthcare Specialist</h3>
+            <div class="company">Carelon Solutions • Iloilo City</div>
+            <p>
+              Managed provider inquiries involving denied claims, appeals,
+              authorization reviews, medical record verification, and
+              patient benefit information while providing accurate
+              professional support.
+            </p>
+          </div>
+
+          <div class="experience-card card reveal">
+            <div class="experience-date">02/2019 — 12/2020</div>
+            <h3>Billing / Technical Specialist</h3>
+            <div class="company">Nearsol-Convergent Inc • Iloilo City</div>
+            <p>
+              Handled billing inquiries, payment processing, plan upgrades,
+              and phone and internet technical support while providing
+              effective troubleshooting and customer service.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         PROJECTS
+         These are portfolio-style projects based on your skills.
+         EDIT HERE: Replace with actual projects if you have them.
+         ========================================================= -->
+    <section id="projects">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="eyebrow">Projects</div>
+          <h2>Work areas & <span class="gradient-text">specialties.</span></h2>
+          <p>
+            Examples of the types of work and workflows I can support.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card card reveal">
+            <div class="project-top">RCM</div>
+            <div class="project-content">
+              <h3>Medical Billing Support</h3>
+              <p>
+                Claim review, denial investigation, appeals, authorization
+                support, insurance requirements, and follow-up.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Medical Billing</span>
+                <span class="tag">Claims</span>
+                <span class="tag">RCM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card card reveal">
+            <div class="project-top">IT</div>
+            <div class="project-content">
+              <h3>Technical Support</h3>
+              <p>
+                Troubleshooting connectivity, VPN, Wi-Fi, phones,
+                computers, software, and related technical issues.
+              </p>
+
+              <div class="tags">
+                <span class="tag">VPN</span>
+                <span class="tag">Troubleshooting</span>
+                <span class="tag">Connectivity</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card card reveal">
+            <div class="project-top">VA</div>
+            <div class="project-content">
+              <h3>Virtual Assistance</h3>
+              <p>
+                Remote support focused on organization, communication,
+                task management, research, and day-to-day assistance.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Remote Work</span>
+                <span class="tag">Support</span>
+                <span class="tag">Administration</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         EDUCATION
+         EDIT HERE: Update your education details.
+         ========================================================= -->
+    <section id="education">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="eyebrow">Education</div>
+          <h2>Education & <span class="gradient-text">background.</span></h2>
+        </div>
+
+        <div class="two-column">
+
+          <div class="info-card card reveal">
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p>
+              Phinma University (U.I), Iloilo City, Philippines
+            </p>
+
+            <div class="tags" style="margin-top: 18px;">
+              <span class="tag">2nd Year College Undergraduate</span>
+              <span class="tag">Information Technology</span>
+            </div>
+          </div>
+
+          <div class="info-card card reveal">
+            <h3>Professional Background</h3>
+            <p>
+              Over 6 years of experience across IT, healthcare, billing,
+              technical support, customer service, and virtual assistance.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         CERTIFICATIONS
+         EDIT HERE: Add additional certifications.
+         ========================================================= -->
+    <section id="certifications">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="eyebrow">Certifications</div>
+          <h2>Credentials that support my <span class="gradient-text">experience.</span></h2>
+        </div>
+
+        <div class="two-column">
+
+          <div class="info-card card certificate reveal">
+            <div class="certificate-icon">✓</div>
+
+            <div>
+              <h3>TestDome Certified</h3>
+              <p>
+                Technical assessment certification.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-card card certificate reveal">
+            <div class="certificate-icon">✓</div>
+
+            <div>
+              <h3>HIPAA Certified</h3>
+              <p>
+                Healthcare privacy and compliance certification.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SERVICES
+         EDIT HERE: Change your services based on the jobs/clients
+         you want to attract.
+         ========================================================= -->
+    <section id="services">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="eyebrow">Services</div>
+          <h2>How I can <span class="gradient-text">help.</span></h2>
+          <p>
+            Support services designed for businesses looking for
+            reliable remote professionals.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card card reveal">
+            <div class="skill-icon">VA</div>
+            <h3>Virtual Assistant</h3>
+            <p>
+              Reliable remote assistance for administrative,
+              operational, communication, and support tasks.
+            </p>
+          </div>
+
+          <div class="service-card card reveal">
+            <div class="skill-icon">CS</div>
+            <h3>Customer Support</h3>
+            <p>
+              Professional customer service, issue resolution,
+              account support, and customer communication.
+            </p>
+          </div>
+
+          <div class="service-card card reveal">
+            <div class="skill-icon">IT</div>
+            <h3>Technical Support</h3>
+            <p>
+              Technical troubleshooting and support for connectivity,
+              devices, software, VPN, and related concerns.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT
+         EDIT HERE: Update email, LinkedIn and location.
+         ========================================================= -->
+    <section id="contact">
+      <div class="container">
+
+        <div class="contact-box card reveal">
+          <div class="section-heading" style="margin-bottom: 20px;">
+            <div class="eyebrow">Contact</div>
+            <h2>Let's work <span class="gradient-text">together.</span></h2>
+          </div>
+
+          <p>
+            Looking for a reliable Virtual Assistant, Customer Support
+            Specialist, or Technical Support professional? Feel free to
+            reach out and let's discuss how I can help.
+          </p>
+
+          <div class="contact-details">
+
+            <!-- EDIT HERE: Your email -->
+            <a
+              class="contact-link"
+              href="mailto:Jesusarturosuan@gmail.com"
+            >
+              ✉ Jesusarturosuan@gmail.com
+            </a>
+
+            <!-- EDIT HERE: Your LinkedIn -->
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/jesus-arturo-suan-6652622ba/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              in LinkedIn
+            </a>
+
+            <!-- EDIT HERE: Your location -->
+            <span class="contact-link">
+              📍 Barotac Nuevo, Iloilo
+            </span>
+
+          </div>
+
+          <a
+            href="mailto:Jesusarturosuan@gmail.com?subject=Job%20Opportunity%20-%20Jesus%20Arturo%20Suan"
+            class="btn btn-primary"
+          >
+            Contact Me →
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       EDIT HERE: Change copyright/name if needed.
+       ========================================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+
+        <div>
+          © <span id="year"></span> Jesus Arturo Suan. All rights reserved.
+        </div>
+
+        <div>
+          Virtual Assistant • Customer Support • Technical Support
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       Vanilla JavaScript only.
+       ========================================================= -->
+  <script>
+
+    /* =========================
+       MOBILE NAVIGATION
+       ========================= */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+
+      if (navLinks.classList.contains("active")) {
+        menuBtn.textContent = "✕";
+      } else {
+        menuBtn.textContent = "☰";
+      }
+    });
+
+    /* Close mobile menu after clicking a link */
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+
+    /* =========================
+       HEADER SCROLL EFFECT
+       ========================= */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+
+    /* =========================
+       SCROLL REVEAL ANIMATION
+       ========================= */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach(function (element) {
+      revealObserver.observe(element);
+    });
+
+
+    /* =========================
+       AUTOMATIC COPYRIGHT YEAR
+       ========================= */
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
+```
 
